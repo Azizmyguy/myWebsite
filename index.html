@@ -1,31 +1,233 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>History of Manchester United</title>
 
   <style>
+    /* General styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-image: linear-gradient(135deg, rgb(249, 82, 82), rgb(212, 40, 40), rgb(255, 136, 72));
+      background-size: cover;
+      color: white;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
 
-     body{
-         text-align: center;
-         background-image: linear-gradient(rgb(249, 82, 82), rgb(212, 40, 40), rgb(255, 136, 72));
-         min-width: 100%;
-         min-height: 100%;
-   <body>
+    /* Navigation bar styling */
+    nav {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.3em;
+      padding: 12px 25px;
+      margin: 0 15px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      transform: scale(1.05);
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-top: 80px;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    /* Content section */
+    .content {
+      padding: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      margin-top: 40px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 600px;
+      margin-top: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      letter-spacing: 1px;
+      margin-top: 20px;
+    }
+
+    .bn29 {
+      border: none;
+      padding: 1em 2.5em;
+      outline: none;
+      color: white;
+      font-size: 1.3em;
+      font-weight: bold;
+      background: none;
+      position: relative;
+      z-index: 1;
+      cursor: pointer;
+      border-radius: 50px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      transition: all 0.3s ease;
+      margin-top: 30px;
+      display: inline-block;
+    }
+
+    .bn29:before,
+    .bn29:after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      content: "";
+      z-index: -2;
+      background-size: 400% 400%;
+      background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+    }
+
+    .bn29:before {
+      filter: blur(7px);
+      animation: pulse 10s infinite ease;
+      width: 115%;
+      height: 115%;
+    }
+
+    .bn29:after {
+      filter: blur(0.3px);
+    }
+
+    .bn29:hover {
+      color: #000;
+      text-shadow: none;
+    }
+
+    .bn29:hover:before {
+      width: 120%;
+      height: 120%;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.1); opacity: 0.8; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    /* About Section */
+    #about {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px 0;
+    }
+
+    #about h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    /* Image Section */
+    .images-section {
+      margin-top: 50px;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .images-section img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5em;
+      }
+
+      iframe {
+        width: 100%;
+        height: auto;
+      }
+
+      .bn29 {
+        padding: 0.8em 2em;
+        font-size: 1.1em;
+      }
+
+      .content {
+        padding: 15px;
+      }
+    }
   </style>
 </head>
+<body>
 
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#images">Images</a>
+  </nav>
 
+  <!-- Home Section -->
+  <section id="home">
+    <h1>History of Manchester United</h1>
 
+    <div class="content">
+      <iframe src="https://www.youtube.com/embed/ETrEybzQ51s?si=HjbChrBI-HxzoeAb" 
+              title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+      <p>ℕ𝕚𝕔𝕜𝕟𝕒𝕞𝕖𝕕 𝕥𝕙𝕖 ℝ𝕖𝕕 𝔻𝕖𝕧𝕚𝕝𝕤, 𝕥𝕙𝕖𝕪 𝕨𝕖𝕣𝕖 𝕗𝕠𝕦𝕟𝕕𝕖𝕕 𝕒𝕤 ℕ𝕖𝕨𝕥𝕠𝕟 ℍ𝕖𝕒𝕥𝕙 𝕃𝕐ℝ 𝔽𝕠𝕠𝕥𝕓𝕒𝕝𝕝 ℂ𝕝𝕦𝕓 𝕚𝕟 1878, 𝕓𝕦𝕥 𝕔𝕙𝕒𝕟𝕘𝕖𝕕 𝕥𝕙𝕖𝕚𝕣 𝕟𝕒𝕞𝕖 𝕥𝕠 𝕄𝕒𝕟𝕔𝕙𝕖𝕤𝕥𝕖𝕣 𝕌𝕟𝕚𝕥𝕖𝕕 𝕚𝕟 1902. 𝔸𝕗𝕥𝕖𝕣 𝕒 𝕤𝕡𝕖𝕝𝕝 𝕡𝕝𝕒𝕪𝕚𝕟𝕘 𝕚𝕟 ℂ𝕝𝕒𝕪𝕥𝕠𝕟, 𝕄𝕒𝕟𝕔𝕙𝕖𝕤𝕥𝕖𝕣, 𝕥𝕙𝕖 𝕔𝕝𝕦𝕓 𝕞𝕠𝕧𝕖𝕕 𝕥𝕠 𝕥𝕙𝕖𝕚𝕣 𝕔𝕦𝕣𝕣𝕖𝕟𝕥 𝕤𝕥𝕒𝕕𝕚𝕦𝕞, 𝕆𝕝𝕕 𝕋𝕣𝕒𝕗𝕗𝕠𝕣𝕕, 𝕚𝕟 1910.</p>
 
+      <a href="https://ir.manutd.com/company-information/history.aspx" target="_blank">
+        <button class="bn29">Explore Manchester United's History</button>
+      </a>
+    </div>
+  </section>
 
-<h1>History about Man United</h1>
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Manchester United</h2>
 
+    <div class="content">
+      <p>Manchester United is one of the most successful football clubs in the world, based in Manchester, England. The club has a rich history of domestic and international success, winning numerous Premier League titles, FA Cups, and UEFA Champions League trophies. Famous players like George Best, Eric Cantona, and Cristiano Ronaldo have graced the pitch, while legendary managers like Sir Alex Ferguson have built a dynasty that continues to thrive.</p>
+    </div>
+  </section>
 
-<iframe width="300" height="200" src="https://www.youtube.com/embed/ETrEybzQ51s?si=HjbChrBI-HxzoeAb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <!-- Images Section -->
+  <section id="images">
+    <h2>Manchester United Images</h2>
 
+    <div class="images-section">
+      <img src="https://download.logo.wine/logo/Manchester_United_F.C./Manchester_United_F.C.-Logo.wine.png" alt="Manchester United Logo">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRznX9B8bLjQ5HhEPix31keqm56VgLI_mAu8g&s" alt="Old Trafford Stadium">
+      <img src="https://e3.365dm.com/24/04/2048x1152/skynews-man-utd-manchester_6538450.jpg" alt="Manchester United Players">
+          <img src="https://cdn.resfu.com/media/img_news/man-utd-unveil-new-blue-away-kit-for-2024-25-term--screenshots-x-manutd.jpg?size=1000x&lossy=1">
+    </div>
+  </section>
 
-<p style="color:white;">ℕ𝕚𝕔𝕜𝕟𝕒𝕞𝕖𝕕 𝕥𝕙𝕖 ℝ𝕖𝕕 𝔻𝕖𝕧𝕚𝕝𝕤, 𝕥𝕙𝕖𝕪 𝕨𝕖𝕣𝕖 𝕗𝕠𝕦𝕟𝕕𝕖𝕕 𝕒𝕤 ℕ𝕖𝕨𝕥𝕠𝕟 ℍ𝕖𝕒𝕥𝕙 𝕃𝕐ℝ 𝔽𝕠𝕠𝕥𝕓𝕒𝕝𝕝 ℂ𝕝𝕦𝕓 𝕚𝕟 1878, 𝕓𝕦𝕥 𝕔𝕙𝕒𝕟𝕘𝕖𝕕 𝕥𝕙𝕖𝕚𝕣 𝕟𝕒𝕞𝕖 𝕥𝕠 𝕄𝕒𝕟𝕔𝕙𝕖𝕤𝕥𝕖𝕣 𝕌𝕟𝕚𝕥𝕖𝕕 𝕚𝕟 1902. 𝔸𝕗𝕥𝕖𝕣 𝕒 𝕤𝕡𝕖𝕝𝕝 𝕡𝕝𝕒𝕪𝕚𝕟𝕘 𝕚𝕟 ℂ𝕝𝕒𝕪𝕥𝕠𝕟, 𝕄𝕒𝕟𝕔𝕙𝕖𝕤𝕥𝕖𝕣, 𝕥𝕙𝕖 𝕔𝕝𝕦𝕓 𝕞𝕠𝕧𝕖𝕕 𝕥𝕠 𝕥𝕙𝕖𝕚𝕣 𝕔𝕦𝕣𝕣𝕖𝕟𝕥 𝕤𝕥𝕒𝕕𝕚𝕦𝕞, 𝕆𝕝𝕕 𝕋𝕣𝕒𝕗𝕗𝕠𝕣𝕕, 𝕚𝕟 1910. (𝕒𝕤 ℕ𝕖𝕨𝕥𝕠𝕟 ℍ𝕖𝕒𝕥𝕙 𝕃𝕐ℝ 𝔽.ℂ.) (𝕒𝕤 𝕄𝕒𝕟𝕔𝕙𝕖𝕤𝕥𝕖𝕣 𝕌𝕟𝕚𝕥𝕖𝕕 𝔽.ℂ.)</p>
-
-
-
+</body>
 </html>
+
+    
